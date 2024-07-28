@@ -19,6 +19,7 @@ const Recipe = (props) => {
 const App = () => {
     console.log("sadasd");
     console.log(process.env.REACT_APP_RECIPES);
+    console.log("sadasd");
     const [data, setData] = React.useState([]);
     React.useEffect(() => {
         fetch(process.env.REACT_APP_RECIPES)
