@@ -3,10 +3,11 @@ import './App.css';
 //http://localhost:3001/recipes
 //REACT_APP_RECIPES
 const Recipe = (props) => {
-
     var name = props.name;
     var id = props.id;
-    var inc = props.inc
+    var inc = props.inc;
+    console.log("recipe " + id);
+    console.log(process.env.REACT_APP_RECIPES);
     return(
         <div className="counterchild">
             {name} - {id}<br/>
