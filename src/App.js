@@ -1,5 +1,7 @@
 import React from "react";
 import './App.css';
+//http://localhost:3001/recipes
+//https://longhaired-skitter-peace.glitch.me/recipes
 const Recipe = (props) => {
 
     var name = props.name;
