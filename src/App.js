@@ -1,7 +1,7 @@
 import React from "react";
 import './App.css';
 //http://localhost:3001/recipes
-//https://longhaired-skitter-peace.glitch.me/recipes
+//REACT_APP_RECIPES
 const Recipe = (props) => {
 
     var name = props.name;
@@ -20,13 +20,13 @@ const Recipe = (props) => {
 const App = () => {
     const [data, setData] = React.useState([]);
     React.useEffect(() => {
-        fetch(process.env.REACT_APP_API_KEY)
+        fetch(process.env.REACT_APP_RECIPES)
         .then(res => res.json())
         .then(json => setData(json.recipes));
     }, []);
     const incFunct = (event) => {
         event.preventDefault();
-        fetch(process.env.REACT_APP_API_KEY, {
+        fetch(process.env.REACT_APP_RECIPES, {
             method: "post",
             headers: {
                 "action": 0,
