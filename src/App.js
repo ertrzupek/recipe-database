@@ -18,13 +18,13 @@ const Recipe = (props) => {
 const App = () => {
     const [data, setData] = React.useState([]);
     React.useEffect(() => {
-        fetch("http://localhost:3001/recipes")
+        fetch("https://longhaired-skitter-peace.glitch.me/recipes")
         .then(res => res.json())
         .then(json => setData(json.recipes));
     }, []);
     const incFunct = (event) => {
         event.preventDefault();
-        fetch("http://localhost:3001/recipes", {
+        fetch("https://longhaired-skitter-peace.glitch.me/recipes", {
             method: "post",
             headers: {
                 "action": 0,
