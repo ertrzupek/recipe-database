@@ -6,8 +6,6 @@ const Recipe = (props) => {
     var name = props.name;
     var id = props.id;
     var inc = props.inc;
-    console.log("recipe " + id);
-    console.log(process.env.REACT_APP_RECIPES);
     return(
         <div className="counterchild">
             {name} - {id}<br/>
@@ -19,6 +17,8 @@ const Recipe = (props) => {
 }
 
 const App = () => {
+    console.log("sadasd");
+    console.log(process.env.REACT_APP_RECIPES);
     const [data, setData] = React.useState([]);
     React.useEffect(() => {
         fetch(process.env.REACT_APP_RECIPES)
